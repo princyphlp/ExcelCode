@@ -1,0 +1,7 @@
+
+To extract a file name from URL:
+//C6 column will have URL , result will be the file name 
+RIGHT(C6,LEN(C6)-FIND("@",SUBSTITUTE(C6,"/","@",LEN(C6)-LEN(SUBSTITUTE(C6,"/",""))),1)
+
+//to extract first part of URL minus the file name
+LEN(C6)-SEARCH(A6,C6)
